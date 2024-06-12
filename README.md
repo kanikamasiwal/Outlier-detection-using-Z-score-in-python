@@ -30,7 +30,6 @@ The provided code can be used as follows:
 **Identify Outliers:** Identify outliers based on Z-score thresholds and analyze the results.
 
 
-
 **Acknowledgments**
 
 This code is inspired by the need for robust outlier detection techniques in data analysis and statistical modeling. Special thanks to the open-source community for their contributions to libraries such as Pandas and NumPy, which make data analysis in Python more accessible and efficient.
