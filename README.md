@@ -8,11 +8,11 @@ Outliers, or anomalies, can skew statistical analyses and machine learning model
 
 # Key Features
 
-**Z-score Calculation:** The code calculates the Z-score for each data point in a given dataset, enabling the identification of outliers based on user-defined thresholds.
+- **Z-score Calculation:** The code calculates the Z-score for each data point in a given dataset, enabling the identification of outliers based on user-defined thresholds.
 
-**Data Cleaning:** Before calculating Z-scores, the code includes a function to clean and convert string-type columns to float type, ensuring accurate calculations.
+- **Data Cleaning:** Before calculating Z-scores, the code includes a function to clean and convert string-type columns to float type, ensuring accurate calculations.
 
-**Visualization:** The code includes visualization techniques such as histograms and boxplots to visualize the distribution of the data and identify potential outliers visually.
+- **Visualization:** The code includes visualization techniques such as histograms and boxplots to visualize the distribution of the data and identify potential outliers visually.
 
 
 # Usage
@@ -23,13 +23,13 @@ The provided code example demonstrates outlier detection using Z-score analysis 
 
 The provided code analyzes outliers in the 'ipa_funding' column and 'ma_premium' in detail:
 
-**Clean Data:** The 'ipa_funding' column is cleaned and converted to float type to ensure accurate calculations.
+- **Clean Data:** The 'ipa_funding' column is cleaned and converted to float type to ensure accurate calculations.
 
-**Visualize Distribution:** The distribution of 'ipa_funding' is visualized using a histogram and a boxplot to understand its distribution and identify potential outliers visually.
+- **Visualize Distribution:** The distribution of 'ipa_funding' is visualized using a histogram and a boxplot to understand its distribution and identify potential outliers visually.
 
-**Calculate Z-scores:** Z-scores are computed for the 'ipa_funding' column using the mean and standard deviation of the column's values.
+- **Calculate Z-scores:** Z-scores are computed for the 'ipa_funding' column using the mean and standard deviation of the column's values.
 
-**Identify Outliers:**  Outliers are identified based on a predefined threshold (e.g., 3 standard deviations from the mean) using Z-scores.
+- **Identify Outliers:**  Outliers are identified based on a predefined threshold (e.g., 3 standard deviations from the mean) using Z-scores.
 
 ### Generalized Approach for Remaining Columns
 
