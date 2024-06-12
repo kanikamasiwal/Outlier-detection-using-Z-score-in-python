@@ -35,28 +35,7 @@ The provided code analyzes outliers in the 'ipa_funding' column and 'ma_premium'
 
 For the remaining columns in the dataset, you can use a generalized approach by specifying a list of columns and analyzing them iteratively:
 
-**# List of columns for outlier analysis**
-columns_of_interest = ['column1', 'column2', 'column3']  # Add additional columns as needed
 
-**# Perform Z-score analysis for each column in the list**
-for column_name in columns_of_interest:
-    # Check if the column contains numeric data
-    if df[column_name].dtype != 'float64':
-        # Clean and convert the column to float type
-        df = clean_and_convert_to_float(df, column_name)
-    
-    # Compute mean and standard deviation
-    column_mean = np.nanmean(df[column_name].values.tolist())
-    column_std = np.nanstd(df[column_name].values.tolist())
-    
-    # Calculate Z-scores
-    df['zscore_' + column_name] = (df[column_name] - column_mean) / column_std
-    
-    # Count outliers
-    outliers_count = len(df[df['zscore_' + column_name].abs() > threshold])
-    
-    # Print the count of outliers for each column
-    print("Number of outliers in", column_name, ":", outliers_count)
 
 
 **Acknowledgments**
