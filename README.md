@@ -35,10 +35,11 @@ The provided code analyzes outliers in the 'ipa_funding' column and 'ma_premium'
 
 For the remaining columns in the dataset, you can use a generalized approach by specifying a list of columns and analyzing them iteratively:
 
-"""List of columns for outlier analysis"""
+```
+# List of columns for outlier analysis
 columns_of_interest = ['column1', 'column2', 'column3']  # Add additional columns as needed
 
-"""Perform Z-score analysis for each column in the list"""
+# Perform Z-score analysis for each column in the list
 for column_name in columns_of_interest:
     # Check if the column contains numeric data
     if df[column_name].dtype != 'float64':
@@ -57,6 +58,8 @@ for column_name in columns_of_interest:
     
     # Print the count of outliers for each column
     print("Number of outliers in", column_name, ":", outliers_count)
+```
+
 
 This approach allows for a detailed analysis of selected columns while providing a generalized approach for analyzing the remaining columns using a list.
 
