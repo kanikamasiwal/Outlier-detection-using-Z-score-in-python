@@ -2,11 +2,11 @@
 This repository contains Python code for detecting outliers in datasets using Z-score, a statistical method commonly employed for identifying data points that deviate significantly from the mean.
 
 
-**Overview**
+**##Overview**
 
 Outliers, or anomalies, can skew statistical analyses and machine learning models, leading to inaccurate results. Detecting and appropriately handling outliers are essential steps in data preprocessing. This repository provides a straightforward implementation of outlier detection using Z-score, which measures how many standard deviations a data point is from the mean.
 
-**Key Features**
+**##Key Features**
 
 **Z-score Calculation:** The code calculates the Z-score for each data point in a given dataset, enabling the identification of outliers based on user-defined thresholds.
 
@@ -15,7 +15,7 @@ Outliers, or anomalies, can skew statistical analyses and machine learning model
 **Visualization:** The code includes visualization techniques such as histograms and boxplots to visualize the distribution of the data and identify potential outliers visually.
 
 
-**Usage**
+**##Usage**
 
 The provided code example demonstrates outlier detection using Z-score analysis for the 'ipa_funding' column and 'ma_premium' in the dataset. Additionally, outlier analysis for another column ('another_column' for example) is presented in detail. For the remaining columns, a generalized approach using a list is described.
 
