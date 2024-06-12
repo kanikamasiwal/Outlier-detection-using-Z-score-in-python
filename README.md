@@ -17,17 +17,46 @@ Outliers, or anomalies, can skew statistical analyses and machine learning model
 
 **Usage**
 
-The provided code can be used as follows:
+The provided code example demonstrates outlier detection using Z-score analysis for the 'ipa_funding' column and 'ma_premium' in the dataset. Additionally, outlier analysis for another column ('another_column' for example) is presented in detail. For the remaining columns, a generalized approach using a list is described.
 
-**Read Data:** Read your dataset in the form of a CSV file using Pandas DataFrame.
+**Detailed Analysis for 'ipa_funding' and 'ma_premium'**
 
-**Data Cleaning:** Clean and convert any necessary columns from string type to float type using the clean_and_convert_to_float function.
+The provided code analyzes outliers in the 'ipa_funding' column and 'ma_premium' in detail:
 
-**Visualization:** Visualize the distribution of the data using histograms and boxplots to identify potential outliers.
+**Clean Data:** The 'ipa_funding' column is cleaned and converted to float type to ensure accurate calculations.
 
-**Compute Z-scores:** Calculate Z-scores for the desired columns in your dataset.
+**Visualize Distribution:** The distribution of 'ipa_funding' is visualized using a histogram and a boxplot to understand its distribution and identify potential outliers visually.
 
-**Identify Outliers:** Identify outliers based on Z-score thresholds and analyze the results.
+**Calculate Z-scores:** Z-scores are computed for the 'ipa_funding' column using the mean and standard deviation of the column's values.
+
+**Identify Outliers:**  Outliers are identified based on a predefined threshold (e.g., 3 standard deviations from the mean) using Z-scores.
+
+**Generalized Approach for Remaining Columns**
+
+For the remaining columns in the dataset, you can use a generalized approach by specifying a list of columns and analyzing them iteratively:
+
+# List of columns for outlier analysis
+columns_of_interest = ['column1', 'column2', 'column3']  # Add additional columns as needed
+
+# Perform Z-score analysis for each column in the list
+for column_name in columns_of_interest:
+    # Check if the column contains numeric data
+    if df[column_name].dtype != 'float64':
+        # Clean and convert the column to float type
+        df = clean_and_convert_to_float(df, column_name)
+    
+    # Compute mean and standard deviation
+    column_mean = np.nanmean(df[column_name].values.tolist())
+    column_std = np.nanstd(df[column_name].values.tolist())
+    
+    # Calculate Z-scores
+    df['zscore_' + column_name] = (df[column_name] - column_mean) / column_std
+    
+    # Count outliers
+    outliers_count = len(df[df['zscore_' + column_name].abs() > threshold])
+    
+    # Print the count of outliers for each column
+    print("Number of outliers in", column_name, ":", outliers_count)
 
 
 **Acknowledgments**
