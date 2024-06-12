@@ -12,3 +12,7 @@ Outliers, or anomalies, can skew statistical analyses and machine learning model
 **Customizable Threshold**: Users can adjust the threshold for defining outliers according to their specific requirements, allowing flexibility in outlier detection.
 
 **Efficient Implementation**: The code is implemented in Python, making use of popular libraries such as Pandas and NumPy for efficient data manipulation and computation.
+
+**Acknowledgments**
+
+This code is inspired by the need for robust outlier detection techniques in data analysis and statistical modeling. Special thanks to the open-source community for their contributions to libraries such as Pandas and NumPy, which make data analysis in Python more accessible and efficient.
