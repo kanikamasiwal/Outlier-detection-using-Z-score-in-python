@@ -21,7 +21,7 @@ The provided code example demonstrates outlier detection using Z-score analysis 
 
 ### Detailed Analysis for 'ipa_funding' and 'ma_premium'
 
-The provided code analyzes outliers in the 'ipa_funding' column and 'ma_premium' in detail:
+The provided code analyzes outliers in the 'ipa_funding' column and 'ma_premium' column in detail:
 
 - **Clean Data:** The 'ipa_funding' column is cleaned and converted to float type to ensure accurate calculations.
 
